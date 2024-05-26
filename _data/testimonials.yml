@@ -1,0 +1,15 @@
+- h3: Corría por donde quería
+  p: 'Mi casa tiene un frente grande. Yo pensé en un <strong>parqueadero para 3 carros</strong>, para cuando me visitaban mis hijos. Pero para mi bebé, era todo un parque. Y así será siempre.'
+  fotos:
+    - ./img/frente.jpg
+    - ./img/frente2.jpg
+- h3: Vivíamos muy seguros
+  p: 'San Agustín es un pueblo turístico. <strong>La zona de mi casa es hotelera y campestre</strong>. No tuve que preocuparme por la inseguridad o lo que le pudiera pasar a mi bebé en mi casa.'
+  fotos:
+    - ./img/seguridad.jpg
+    - ./img/seguridad2.jpg
+    - ./img/seguridad3.jpg
+- h3: Dormimos delicioso
+  p: 'Te confieso que al principio me molestaban los gallos. No estaba acostumbrado a despertar en un lugar tan natural. Pero me encantaba al final. Es mejor que despertarme con el pito de un carro.'
+  fotos:
+    - ./img/habitacion.jpg

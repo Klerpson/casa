@@ -1,0 +1,47 @@
+header > div:first-child{
+  background: url('../img/casa1.webp') left center no-repeat;
+  background-size: cover;
+  background-color: #0a0a0a90;
+  color: white;
+  display: grid;
+  align-content: center;
+}
+
+.hero_servicios{
+  background-color: var(--principal);
+  display: grid;
+  align-content: center;
+}
+
+.hero_servicios ul{
+  padding: 2em 0 0;
+  display: grid;
+  gap: 3em;
+}
+
+.hero_servicios ul li{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 0;
+}
+
+.hero_servicios ul li h3{
+font-size: 18px;
+margin-bottom: 12px;
+}
+
+.hero_servicios ul li p{
+font-size: 16px;
+line-height: 1.2;
+}
+
+.hero_servicios ul li svg{
+  min-width: 80px;
+}
+
+header .button{
+  color: white;
+  font-weight: 700;
+  background-color: var(--accion);
+}

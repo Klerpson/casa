@@ -1,0 +1,38 @@
+nav {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  display: flex;
+  box-shadow: var(--shadow);
+  width: min(100%, 992px);
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .logo{
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+nav .logo img {
+  width: min(100%, 40px);
+}
+
+nav .logo span{
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  
+  nav .logo span{
+    display: inline-block;
+    font-family: var(--fuenteTexto);
+    font-size: 1.2em;
+    font-weight: bolder;
+  }
+  
+}

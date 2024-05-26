@@ -1,0 +1,6 @@
+<swiper-container class="mySwiper" pagination="true" pagination-dynamic-bullets="true">
+  {% capture datos %}{{include.datos}}{% endcapture %}
+  {% for data in site.data.datos %}
+  <swiper-slide>Slide 1</swiper-slide>
+  {% endfor %}
+</swiper-container>

@@ -1,0 +1,16 @@
+<section class="carousel_container">
+  <div class="carousel">  
+    {% for item in site.data.clients %}
+    <article class="item">
+      <img src="./img/{{item.icon}}" loading="lazy" alt="{{item.title}}">
+      <span>{{item.title}}</span>
+  </article>
+  {% endfor %}
+  {% for item in site.data.clients %}
+  <article class="item">
+    <img src="./img/{{item.icon}}" loading="lazy" alt="{{item.title}}">
+    <span>{{item.title}}</span>
+  </article>
+  {% endfor %}
+  </div> 
+</section>
