@@ -31,6 +31,7 @@ nav .logo span{
   nav .logo span{
     display: inline-block;
     font-family: var(--fuenteTexto);
+    color: var(--secundario);
     font-size: 1.2em;
     font-weight: bolder;
   }

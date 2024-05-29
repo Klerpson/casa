@@ -41,7 +41,9 @@ line-height: 1.2;
 }
 
 header .button{
-  color: white;
+  color: var(--secundario);
+  border: 2px solid var(--secundario);
+  border-radius: var(--radius);
   font-weight: 700;
   background-color: var(--accion);
 }
