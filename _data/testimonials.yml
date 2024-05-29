@@ -1,15 +1,15 @@
-- h3: Corría por donde quería
-  p: 'Mi casa tiene un frente grande. Yo pensé en un <strong>parqueadero para 3 carros</strong>, para cuando me visitaban mis hijos. Pero para mi bebé, era todo un parque. Y así será siempre.'
+- h3: Ella corría por donde quería
+  p: 'Mi casa tiene un frente grande. Es un <strong>parqueadero para 3 carros</strong>, para cuando me visitaban mis hijos. Para mi bebé, era todo un parque. Y así será siempre.'
   fotos:
     - ./img/frente.jpg
     - ./img/frente2.jpg
-- h3: Vivíamos muy seguros
+- h3: La zona es muy segura para vivir
   p: 'San Agustín es un pueblo turístico. <strong>La zona de mi casa es hotelera y campestre</strong>. No tuve que preocuparme por la inseguridad o lo que le pudiera pasar a mi bebé en mi casa.'
   fotos:
     - ./img/seguridad.jpg
     - ./img/seguridad2.jpg
     - ./img/seguridad3.jpg
-- h3: Dormimos delicioso
-  p: 'Te confieso que al principio me molestaban los gallos. No estaba acostumbrado a despertar en un lugar tan natural. Pero me encantaba al final. Es mejor que despertarme con el pito de un carro.'
+- h3: Dormimos delicioso en esta casa
+  p: 'Te confieso que al principio me molestaban los gallos. No estaba acostumbrado a despertar en un lugar tan natural. Pero, con el tiempo, me encantó. Era mejor que despertarme con el pito de un carro.'
   fotos:
     - ./img/habitacion.jpg
