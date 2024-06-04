@@ -1,0 +1,32 @@
+<header class="home_header wrapper">
+  {% assign layout = page.layout %}
+  {% case layout %}
+  {% when "default" %}
+  {% include nav.html %}
+  <div class="flow">
+    <h1>{{page.h1}}</h1>
+    <p>Tú tienes tu casa en venta. Yo tengo la página web donde la gente busca tu casa.</p>
+    <h2>Te explico cómo vender tus casas conmigo</h2>
+    <ul>
+      <li>🔹Sin terceros o comisiones.</li>
+      <li>🔹Con publicidad incluida.</li>
+      <li>🔹Habla directamente con el cliente.</li>
+    </ul>
+    <a href="{{site.whatsapp}}" class="boton boton_1" rel="nofollow noopener noreferrer" target="_blank">Vendamos tu casa</a>
+  </div>
+  <img src="{{ page.hero | relative_url }}" alt="{{page.alt}}">
+  {% when "landing" %}
+  <img src="{{page.hero |relative_url}}" alt="{{page.alt}}" width="400" height="500">
+  <div class="flow">
+    <h1>{{page.h1}}</h1>
+    <p>{{page.description}}</p>
+    <a href="{{page.whatsapp}}" class="boton boton_1" rel="nofollow noopener noreferrer" target="_blank">Escribe al propietario</a>
+  </div>
+  {% else %}
+  <div class="header_post">
+    <img src="{{page.hero|relative_url}}" alt="{{page.alt}}">
+    <h1>{{page.h1}}</h1>
+  </div>
+  <p>{{page.description}}</p>
+  {% endcase %}
+</header>

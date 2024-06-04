@@ -1,49 +1,34 @@
-header > div:first-child{
-  background: url('../img/casa1.webp') left center no-repeat;
-  background-size: cover;
-  background-color: #0a0a0a90;
-  color: white;
-  display: grid;
-  align-content: center;
-}
-
-.hero_servicios{
-  background-color: var(--principal);
-  display: grid;
-  align-content: center;
-}
-
-.hero_servicios ul{
-  padding: 2em 0 0;
-  display: grid;
-  gap: 3em;
-}
-
-.hero_servicios ul li{
+.home_header{
+  margin-top: 4em;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.home_header > div{
+  flex: 1 0 400px;
+  max-width: 100%;
+}
+
+.home_header div h1{
   margin: 0;
 }
 
-.hero_servicios ul li h3{
-font-size: 18px;
-margin-bottom: 12px;
+.header_landing{
+  display: grid;
+  place-items: center;
+  gap: 40px;
 }
 
-.hero_servicios ul li p{
-font-size: 16px;
-line-height: 1.2;
+.home_header img,
+.header_landing img
+{
+  box-shadow: var(--shadow);
+  width: min(100%, 400px);
 }
 
-.hero_servicios ul li svg{
-  min-width: 80px;
-}
-
-header .button{
-  color: var(--secundario);
-  border: 2px solid var(--secundario);
-  border-radius: var(--radius);
-  font-weight: 700;
-  background-color: var(--accion);
+.header_landing h1{
+  text-align: center;
 }

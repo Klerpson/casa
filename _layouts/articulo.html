@@ -1,0 +1,85 @@
+---
+layout: default
+---
+<div class="content flow">
+  {% include breadcrumbs.html %}
+  <h4>
+    {% capture words %}
+    {{ content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words contains '-' %}
+    {{ words | plus: 150 | divided_by: 150 | append: ' minutos para leerlo 🤓' }}
+    {% endunless %}
+  </h4>
+</div>
+<main class="articulo wrapper">
+  <article class="flow">
+    <h2>{{page.title}}</h2>
+    {{ content }}
+    {% if page.referencias %}
+    <div class="referencias" id="fuentes">
+      <h4>Créditos de las gráficas, referencias y fuentes:</h4>
+      <ul>
+        {% for link_hash in page.referencias %}
+        {% for link in link_hash %}
+        <li>
+          <a href="{{ link[1] }}" rel="nofollow noopener noreferrer" target="_blank" title="{{ link[0] }}">{{ link[0] }}</a>
+        </li>
+        {% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </article>
+  <aside>
+
+    <h3>Aprende más...</h3>
+
+    {% assign maxRelated = 5 %}
+    {% assign minCommonTags =  1 %}
+    {% assign maxRelatedCounter = 0 %}
+
+
+    {% for post in site.posts %}
+
+
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for tag in post.tags %}
+    {% if post.url != page.url %}
+    {% if page.tags contains tag %}
+    {% assign sameTagCount = sameTagCount | plus: 1 %}
+    {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+    {% assign commonTags = commonTags | append: tagmarkup %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+
+    {% if sameTagCount >= minCommonTags %}
+
+    <div class="relacionados">
+      <a href="{{ post.url |relative_url }}" title="{{post.title}}">
+        {% if post.hero %}
+        <img src="{{ post.hero | relative_url }}" alt="{{post.altheader}}" title="{{post.imgtitle-header}}">
+        {% endif %}
+        <h4> {{ post.title }}</h4>
+      </a>
+    </div>
+
+    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+    {% if maxRelatedCounter >= maxRelated %}
+    {% break %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    <hr>
+    <h4>¿Estás aprovechando las ventajas de una página web bien hecha? Si no, escríbeme</h4>
+    <a href="mailto:{{site.email}}" rel="nofollow" class="boton">Haz tu consulta</a>
+  </aside>
+  <div class="share wrapper">
+    {% include share.html %}
+  </div>
+</main>
+{% include cta.html %}
+<a href="#">{% include up.html %}</a>

@@ -4,19 +4,20 @@ footer {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-    var(--blanco), var(--principal)
-    );
+  background-color: var(--secundario);
 }
 
 footer a,
 footer p {
   display: inline-block;
-  font-family: var(--fuenteTitulos);
+  font-family: var(--fuenteTexto);
+  font-size: var(--sizeTextos);
+  margin: 0;
+  padding: 0;
 }
 
 footer a {
-  color: var(--grisFuentes);
-  margin: 1rem .5rem;
+  color: var(--principal);
+  margin: 1rem 0.5rem;
   font-weight: 700;
 }
