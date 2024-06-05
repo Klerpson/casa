@@ -8,20 +8,6 @@ alt: Foto de la casa en venta de San Agustin
 cta: "https://api.whatsapp.com/send?phone=+573218301698&text=%F0%9F%91%B7%F0%9F%8F%BC%20Hola.%20Por%20favor,%20reg%C3%A1lame%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tu%20casa%20en%20venta"
 celular: 3218301698
 ---
-
-<!-- Que la inversión crezca.
-Comprar una casa que no se esté dañando.
-Evitar reparaciones.
-Pasarse lo más pronto posible.
-Disfrutar de un buen vecindario.
-Que no le salga muy cara.
-No pagar mucho en impuestos.
-Comprar y poder alquilar.
-Evitar estafas.
-Cerca a servicios básicos.
-Que te guste la casa.
-No es una cajita de 400M, es una gran casa amplia -->
-
 ## Te vendo mi casa por un vecino marihuano. Luego te cuento más.<br> Sin terceros ni amarraderos
 
 Mira.
@@ -140,4 +126,3 @@ No las he aceptado por el valor. Me ofrecen propiedades de mucho menos valor. Y 
 Gracias vecino marihuano.
 
 Si no hubiera sido por marihuano, no tendría en mente construir donde estoy ahora. Tampoco hubiera tenido la oportunidad de comprar el lote que compré.
-
