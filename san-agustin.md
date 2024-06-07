@@ -7,6 +7,7 @@ hero: img/frente2.webp
 alt: Foto de la casa en venta de San Agustin
 cta: "https://api.whatsapp.com/send?phone=+573218301698&text=%F0%9F%91%B7%F0%9F%8F%BC%20Hola.%20Por%20favor,%20reg%C3%A1lame%20m%C3%A1s%20informaci%C3%B3n%20sobre%20tu%20casa%20en%20venta"
 celular: 3218301698
+published: no
 ---
 ## Te vendo mi casa por un vecino marihuano. Luego te cuento más.<br> Sin terceros ni amarraderos
 
@@ -28,13 +29,13 @@ Mi casa me encanta.
 
 Ahora bien, **te vendo mi casa porque mi esposa no se aguanta a uno los vecinos**, y eso me llevó a mi nuevo proyecto. Es toda una historia. ¡Te va a encantar!
 
-## El vecino de los que te hablé y que resultó en vender mi casa
+## El vecino del que te hablé y que resultó en esta venta de mi casa
 
-Por la vía principal que va hacia los lugares turísticos cercanos, porque hay varios cerca a mi casa, hay una familia que no quiere nadie.
+Por **la vía principal que va hacia los lugares turísticos cercanos**, porque hay varios cerca a mi casa, hay una familia que no quiere nadie.
 
 Horribles.
 
-Es igual que los malos vecinos de cualquier vecindario. Solo que el mariguano que vive allí se la montó a mi esposa.
+Es igual que los malos vecinos de cualquier vecindario. Imagino que te habrá tocado alguno en tu vida. Solo que el marihuano que vive allí *se la montó a mi esposa*.
 
 Esa situación nos trajo algo que no esperábamos. **El apoyo de todos los demás vecinos**. Hasta el vecino que va después de mi casa está más comprometido en embellecer la zona ahora que tenemos más comunicación.
 
