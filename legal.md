@@ -1,5 +1,5 @@
 ---
-layout: page-basic
+layout: default
 title: Términos y Codiciones de Uso | casaventa.co
 description: Condiciones de uso de la página casaventa.co
 h1: Término y condiciones, privacidad y aspectos legales del uso de casaventa.co
