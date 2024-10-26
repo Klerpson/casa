@@ -249,22 +249,26 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
     </div>
   </section>
   <div class="form-container wrapper" id="formulario">
-    <div id="form-wrapper">
-      <h2>Te invito a ver mi apartamento</h2>
-      <form id="contact-form">
-        <div class="form-group"> <label for="name" class="form-label">Nombre</label> <input type="text" id="name"
-            name="nombre" class="form-input" required> </div>
-        <div class="form-group"> <label for="phone" class="form-label">Teléfono</label> <input type="tel" id="phone"
-            name="celular" class="form-input" required> </div> <button type="submit" class="form-submit">Enviar</button>
-        <small>→ Al enviar tus datos autorizas su uso para contactarte. Ver <a href="/legal" rel="nofollow"
-            target="_blank">los términos y condiciones</a></small>
+    <div class="form-container">
+      <div id="form-wrapper">
+        <h2>Te invito a conocer mi apartamento</h2>
+        <form id="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" id="name" name="nombre" class="form-input" required>
+          </div>
+          <div class="form-group">
+              <label for="phone" class="form-label">Teléfono</label>
+              <input type="tel" id="phone" name="celular" class="form-input" required>
+          </div>
+          <button type="submit" class="form-submit">Enviar</button>
       </form>
-    </div>
-    <div id="confirmation-message" class="confirmation-message">
-      <h3>¡Gracias por tu solicitud!</h3>
-      <p>Tus datos fueron enviados. Te llamaremos pronto.</p> <button class="another-request">Enviar otra
-        solicitud</button>
-    </div>
+      </div>
+      <div id="confirmation-message" class="confirmation-message">
+        <h3>¡Gracias por tu solicitud!</h3>
+        <p>Tus datos fueron enviados. Te llamaremos pronto.</p> <button class="another-request">Enviar otra
+          solicitud</button>
+      </div>
   </div>
   <footer class="fondo">
     <h2>Vive por fin en la zona campestre que no está lejos de Bogotá</h2>
