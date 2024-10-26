@@ -44,7 +44,8 @@ layout: compress
   <link rel="preload" as="style" href="/css-hernando/styles.css">
   <link rel="preload" as="font" href="/css-hernando/fonts/montserrat-v26-latin-700.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="/css-hernando/fonts/montserrat-v26-latin-900.woff2" type="font/woff2" crossorigin>
-  <link rel="preload" as="font" href="/css-hernando/fonts/montserrat-v26-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="/css-hernando/fonts/montserrat-v26-latin-regular.woff2" type="font/woff2"
+    crossorigin>
   <!-- CSS -->
   <link href="/css-hernando/styles.css" rel="stylesheet"> <!-- Structured Data -->
 </head>
@@ -83,7 +84,11 @@ layout: compress
       <h2>¿Tú podías salir a caminar al aire libre en la pandemia?</h2>
       <p>Yo sí. Y lo disfrutaba mucho. Hasta me paraba la policía. Sabían que yo podía salir a respirar aire puro en la
         cercana montaña del conjunto residencial. Así que no podían más que felicitarme.</p>
-    </div> <img src="/img/section-5.avif" alt="Foto de los alrededores campestres del conjunto residencial">
+    </div>
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="{{ 'img/terraza-casa-chia.mp4' | relative_url}}" type="video/mp4">
+      Tu navegador no soporta la etiqueta de video.
+    </video>
   </section>
   <section class="dos-columnas wrapper">
     <div>
@@ -98,6 +103,10 @@ layout: compress
       <p>Los ingenieros y arquitectos del conjunto residencial son unos genios. Dejaron un sistema de recolección de
         aguas lluvias, que se utiliza para todos los sanitarios. ¡Así ahorras mucho dinero en tu baño!</p>
     </div> <img src="/img/servicios-apartamento.avif" alt="Foto de los baños del apartamento">
+  </section>
+  <section class="gallery_photos">
+    <h2>Más fotos de este tranquilo lugar que hoy está a tu alcance</h2>
+      {% include gallery.html client="chia" %}
   </section>
   <section class="dos-columnas wrapper">
     <div>
@@ -137,8 +146,8 @@ layout: compress
       <div class="advantage-card small">
         <h3>1. Haz clic en el botón de contacto</h3>
         <p>Te dirigirá a mi WhatsApp personal. Es este mismo de aquí. O el de arriba en la barra.</p> <a
-          href="#formulario" class="cta-button button-a" id="lead_whatsapp" title="boton de WhatssApp"
-         >Consigue tu apartamento</a>
+          href="#formulario" class="cta-button button-a" id="lead_whatsapp" title="boton de WhatssApp">Consigue tu
+          apartamento</a>
       </div>
       <div class="advantage-card small">
         <h3>2. Agenda una visita</h3>
@@ -209,7 +218,7 @@ layout: compress
       </div>
     </div>
   </section>
-  <div class="form-container wrapper"  id="formulario">
+  <div class="form-container wrapper" id="formulario">
     <div id="form-wrapper">
       <h2>¿Te llamamos?</h2>
       <form id="contact-form">
@@ -217,7 +226,8 @@ layout: compress
             name="nombre" class="form-input" required> </div>
         <div class="form-group"> <label for="phone" class="form-label">Teléfono</label> <input type="tel" id="phone"
             name="celular" class="form-input" required> </div> <button type="submit" class="form-submit">Enviar</button>
-            <small>→ Al enviar tus datos autorizas su uso para contactarte. Ver <a href="/legal" rel="nofollow" target="_blank">términos y condiciones</a></small>
+        <small>→ Al enviar tus datos autorizas su uso para contactarte. Ver <a href="/legal" rel="nofollow"
+            target="_blank">términos y condiciones</a></small>
       </form>
     </div>
     <div id="confirmation-message" class="confirmation-message">
@@ -237,5 +247,86 @@ layout: compress
   </footer>
 </body>
 <script> const form = document.getElementById('contact-form'); const formWrapper = document.getElementById('form-wrapper'); const confirmationMessage = document.getElementById('confirmation-message'); const anotherRequestButton = document.querySelector('.another-request'); form.addEventListener('submit', (e) => { e.preventDefault(); let data = new FormData(form); fetch('https://script.google.com/macros/s/AKfycbzlcwcm45DBxwukFyHUywX4pZTiOIb8ymuapYwsQLYiewisfHsvGQKzXlNbuqF_pZYV/exec', { method: "POST", body: data }).then(res => res.text()).then(data => { console.log(data); formWrapper.style.display = 'none'; confirmationMessage.style.display = 'block'; }).catch(error => { console.error('Error:', error); alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.'); }); }); anotherRequestButton.addEventListener('click', () => { form.reset(); confirmationMessage.style.display = 'none'; formWrapper.style.display = 'block'; }); </script>
+<script>
+  (() => {
+      let isDragging = false;
+      let startY = 0;
+      let currentY = 0;
+      const container = document.getElementById('stackContainer');
+      const cards = container.getElementsByClassName('card');
+      
+      function handleDragStart(e) {
+          const card = e.target.closest('.card');
+          if (!card || card.classList.contains('dismissed')) return;
+          
+          isDragging = true;
+          startY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+          card.classList.add('dragging');
+          e.preventDefault();
+      }
+
+      function handleDragMove(e) {
+          if (!isDragging) return;
+          
+          const card = container.querySelector('.card.dragging');
+          if (!card) return;
+
+          currentY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+          const deltaY = currentY - startY;
+          
+          if (deltaY < 0) {
+              card.style.transform = `translateY(${deltaY}px)`;
+          }
+      }
+
+      function handleDragEnd() {
+          const card = container.querySelector('.card.dragging');
+          if (!card) return;
+
+          const deltaY = currentY - startY;
+          
+          if (deltaY < -50) {
+              dismissCard(card);
+          } else {
+              card.style.transform = '';
+          }
+          
+          card.classList.remove('dragging');
+          isDragging = false;
+      }
+
+      function dismissCard(card) {
+          card.classList.add('dismissed');
+          setTimeout(() => {
+              container.insertBefore(card, container.lastElementChild);
+              card.classList.remove('dismissed');
+              card.style.transform = '';
+          }, 300);
+      }
+
+      Array.from(cards).forEach(card => {
+          card.addEventListener('mousedown', handleDragStart);
+          card.addEventListener('touchstart', handleDragStart, { passive: false });
+      });
+
+      document.addEventListener('mousemove', handleDragMove);
+      document.addEventListener('touchmove', handleDragMove, { passive: false });
+
+      document.addEventListener('mouseup', handleDragEnd);
+      document.addEventListener('touchend', handleDragEnd);
+
+      container.querySelector('.next').addEventListener('click', () => {
+          const topCard = container.querySelector('.card:not(.dismissed)');
+          if (topCard) dismissCard(topCard);
+      });
+
+      container.querySelector('.prev').addEventListener('click', () => {
+          const lastCard = container.querySelector('.card:last-of-type');
+          if (lastCard && !lastCard.classList.contains('controls')) {
+              container.insertBefore(lastCard, container.firstElementChild);
+          }
+      });
+  })();
+</script>
 
 </html>
